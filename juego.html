@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+
+    <header class="bajar">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                        <li class="nav-item separar_items">
+                            <a class="nav-link tam-fuente" aria-current="page" href="./index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item separar_items">
+                            <a class="nav-link tam-fuente" aria-current="page" href="./Nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item separar_items">
+                            <a class="nav-link tam-fuente" href="./Catalogo.html">Juegos</a>
+                        </li>
+
+                        <li class="nav-item separar_items">
+                            <a class="nav-link tam-fuente d-block d-md-none d-lg-none d-xl-none d-xxl-none" href="./iniciar-sesion.html">Iniciar sesión</a>
+                        </li>
+
+                        <li class="nav-item separar_items">
+                            <a class="nav-link tam-fuente d-block d-md-none d-lg-none d-xl-none d-xxl-none" href="./carrito.html">Carrito</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <form class="d-flex flex-nowrap my-2 -my-lg-0">
+                    <div class="input-group"> 
+                        <input class="form-control mr-sm-2 controlar-forma" type="search" placeholder="Buscar" aria-label="Search">
+                        <a href="./Catalogo.html"><button class="btn btn-outline-success" type="button">🔎</button></a>
+                        <a class="quitar-link" href="./carrito.html"><button class="btn btn-outline-success d-none d-sm-block" type="button">🛒</button></a>
+                        <a href="./iniciar-sesion.html"><button class="btn btn-outline-success d-none d-sm-block" type="button">👤</button></a>
+                    </div>
+                </form>
+                
+            </div>
+        </nav>
+    </header>
+
+    <div>
+        
+        <h1 class="centrar_titulo bajar tam-titulo">
+        <img  src="./assets/img/logoo.png" alt="Logo" class="logo">Mega Games</h1>    
+    </div>
+
+    <hr class="bajar centrar_titulo">
+
+    <main>
+        <section class="cuadrado bordear mx-auto">
+            <h2 id="titlePage" class="centrar-texto"></h2>
+           <div>
+            
+           </div>
+            <div class="container-fluid">
+                <div class="row ">
+                    <div class="col-xs-12 col-md-6 col-lg-5 col-xl-5 col-xxl-4 text-center mb-2 tam-foto2">
+                        <img id="imagePage" src="" class="img-fluid " alt="Imagen del juego">
+                    </div>
+                    
+
+                    <div class="col-xs-12 col-md-6 col-lg-7 col-xl-7 col-xxl-6">
+                        <p class="texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                             magna aliqua. Quam vulputate dignissim suspendisse in est. Nam at lectus urna duis convallis convallis.
+                             Vulputate mi sit amet mauris commodo quis imperdiet massa tincidunt. Augue neque gravida in fermentum et. </p>
+
+                        <div class="col-xxl-2"></div> 
+
+                        <div class="d-flex justify-content-center mb-4">
+                            <div class="d-flex cuadro-genero bordear2">Metroidvania</div>
+                            <div class="d-flex cuadro-genero bordear2">Acción</div>
+                            <div class="d-flex cuadro-genero bordear2">Indie</div>
+                            <div class="d-flex cuadro-genero2 bordear2">Aventura</div>
+                            
+                        </div>
+                        <div class="d-flex justify-content-center"><p id="cantidadEstiloPage" class=" texto negrita"></p><p id="cantidadPage" class="texto"></p></div>
+                        
+                        <div class="d-flex justify-content-center">
+                            <div class="d-flex">
+                                <div><button class="bg-danger tamaño-cuadro2 rounded-start">-</button></div>
+                                <div><input type="text" class="tamaño-cuadro text-center" value="1"></div>
+                                <div><button class="bg-success tamaño-cuadro2 rounded-end">+</button></div>
+                            </div>
+
+                            <a href=""><img class="tamaño-fav" src="./assets/img/favorito.png" alt="imagen fav"></a>
+                        </div>
+
+                        <div class="d-flex justify-content-center texto"><p id="precioEstiloPage" class="negrita"></p><p id="precioPage"></p></div>
+
+                        <div class="d-flex cuadro-genero2 bordear2 mx-auto mt-4 mb-4"><a class="quitar-azul3" href="./carrito.html">Comprar</a></div>
+                        <div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="color-fondo mb-0">
+        <div class="display-footer">
+            <div class="borde-derecha">
+                <ul class="cambiar-texto-footer">
+                    <li><a href="./Nosotros.html" class="quitar-azul">La empresa</a></li>
+                    <li><a href="./Catalogo.html" class="quitar-azul">Productos</a></li>
+                    <li><a href="./Nosotros.html" class="quitar-azul">Quienes Somos</a></li>
+                    <li><a href="./index.html" class="quitar-azul">Servicios</a></li>
+                    <li><a href="./Nosotros.html" class="quitar-azul">Contacto</a></li>
+                </ul>
+            </div>
+    
+            <div class="alinear-centro borde-derecha">
+                <h3 class="color-blanco">¿Dónde encontrarnos?</h3>
+                <a href="https://www.google.com/maps" class="quitar-azul2">El Árbol 123. Santiago. <br> Región Metropolitana</a>
+            </div>
+    
+            <div class="alinear-centro">
+                <h3 class="color-blanco3">Contactos</h3>
+                <ul class="cambiar-texto-footer">
+                    <li><a href="https://www.instagram.com" class="quitar-azul2">Instragram</a></li>
+                    <li><a href="https://web.facebook.com/?locale=es_LA&_rdc=1&_rdr" class="quitar-azul2">Facebook</a></li>
+                    <li><a href="https://twitter.com/?lang=es" class="quitar-azul2">Twitter</a></li>
+                    <li><a href="https://www.whatsapp.com/?lang=es_LA" class="quitar-azul2">WhatsApp</a></li>
+                    <li><a href="https://www.google.com/intl/es-419/gmail/about/" class="quitar-azul2">E-mail</a></li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="alinear-centro">
+            <h2 class="color-distinto">Mega Games</h2>
+            <p class="color-distinto">Términos de uso Políticas de privacidad Política de derechos de autor</p>
+            <p class="color-distinto-tras">© 2024 Mega Games • Diseñado por: VisionWeb</p>    
+        </div>
+    </footer>
+
+    <script src="./assets/js/boostrap/bootstrap.bundle.min.js"></script>
+</body>
+</html>

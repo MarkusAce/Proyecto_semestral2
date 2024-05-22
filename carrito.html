@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito De Compra</title>
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+    <header class="bajar">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                        <li class="nav-item separar_items">
+                            <a class="nav-link tam-fuente" aria-current="page" href="./index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item separar_items">
+                            <a class="nav-link tam-fuente" aria-current="page" href="./Nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item separar_items">
+                            <a class="nav-link tam-fuente" href="./Catalogo.html">Juegos</a>
+                        </li>
+
+                        <li class="nav-item separar_items">
+                            <a class="nav-link tam-fuente d-block d-md-none d-lg-none d-xl-none d-xxl-none" href="./iniciar-sesion.html">Iniciar sesión</a>
+                        </li>
+
+                        <li class="nav-item separar_items">
+                            <a class="nav-link active tam-fuente d-block d-md-none d-lg-none d-xl-none d-xxl-none" href="./carrito.html">Carrito</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <form class="d-flex flex-nowrap my-2 -my-lg-0">
+                    <div class="input-group"> 
+                        <input class="form-control mr-sm-2 controlar-forma" type="search" placeholder="Buscar" aria-label="Search">
+                        <a href="./Catalogo.html"><button class="btn btn-outline-success" type="button">🔎</button></a>
+                        <a class="quitar-link" href="./carrito.html"><button class="btn btn-outline-success d-none d-sm-block" type="button">🛒</button></a>
+                        <a href="./iniciar-sesion.html"><button class="btn btn-outline-success d-none d-sm-block" type="button">👤</button></a>
+                    </div>
+                </form>
+                
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div>
+            <h1 class="centrar_titulo bajar tam-titulo">
+            <img  src="./assets/img/logoo.png" alt="Logo" class="logo">Mega Games</h1>
+            <hr class="centrar_titulo mb-4">
+        </div>
+        <section class="cuadrado
+                        bordear
+                        mx-auto" >
+            <h4 class="container">
+                Carrito De Compra
+            </h4>
+            <hr>
+            <div class="conteiner-fluid">
+                <div class="row">
+                    <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 col-xl-3 mx-auto">
+                        <p class="text-start moverizquierda letras-carrito">Tus Productos</p>
+                    </div>
+                    <div class="text-center col-xs-0 col-sm-3 col-md-3 col-lg-3 col-xl-3 mx-auto d-none d-sm-block">
+                        <p class="letras-carrito">Precio</p>
+                    </div>
+                    <div class="text-center col-xs-0 col-sm-3 col-md-3 col-lg-3 col-xl-3 mx-auto d-none d-sm-block">
+                        <p class="letras-carrito">Cantidad</p>
+                    </div>
+                    <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 col-xl-3 mx-auto">
+                        <p class="text-end moverderecha letras-carrito">Subtotal</p>
+                    </div>
+
+                    <div class="text-start col-xs-6 col-sm-3 col-md-3 col-lg-3 col-xl-3 mx-auto moverizquierda">
+                        <img src="./assets/img/Foto juegos/ps5-hollow-knight-voidheart-edition.jpg" class="img-fluid mover-img tamaño2" alt="Imagen Hollow Knight">
+                    </div>
+
+                    <div class="text-center col-xs-1 col-sm-3 col-md-3 col-lg-3 col-xl-3 mx-auto d-none d-sm-block">
+                        <p class="letras-carrito">$ 16.000</p>
+                    </div>
+                    <div class="text-center col-xs-1 col-sm-3 col-md-3 col-lg-3 col-xl-3 mx-auto d-none d-sm-block">
+                        <input type="number" name="" class="numeros" value="1" min="0" max="100" step="1">
+                    </div>
+                    <div class="text-center col-xs-6 col-sm-3 col-md-3 col-lg-3 col-xl-3 mx-auto">
+                        <p class="text-end moverderecha letras-carrito">$ 16.000</p>
+                    </div>
+                    <div class="text-start col-xs-12 col-sm-3 col-md-3 col-lg-3 col-xl-3 mx-auto moverizquierda">
+                        <h6 class="letras-carrito">Hollow Knight - PS5 Edition</h6>
+                            <p class="letras-carrito">Envío: Envío en 1 Día Hábil <br>
+                            Stock: Disponible</p>
+                    </div>
+                    <div class="text-center col-xs-1 col-sm-3 col-md-3 col-lg-3 col-xl-3 mx-auto d-none d-sm-block">
+                        
+                    </div>
+                    <div class="text-center col-xs-1 col-sm-3 col-md-3 col-lg-3 col-xl-3 mx-auto d-none d-sm-block">
+                        
+                    </div>
+                    <div class="text-end col-xs-1 col-sm-3 col-md-3 col-lg-3 col-xl-3 mx-auto moverderecha d-none d-sm-block">
+                        <button class="boton-eliminar">
+                            <img src="./assets/img/basurero.png" alt="eliminar" class="img-fluid mover-img tamaño3">
+                        </button>
+                    </div>
+                    <div class="text-start col-xs-1 col-sm-3 col-md-3 col-lg-3 col-xl-3 mx-auto moverizquierda d-none d-sm-block">
+                        <button class="boton4"><a href="./index.html">Seguir Mirando</a></button>
+                    </div>
+                    <div class="text-center col-xs-1 col-sm-3 col-md-3 col-lg-3 col-xl-3 mx-auto d-none d-sm-block">
+                        
+                    </div>
+                    <div class="text-center col-xs-1 col-sm-3 col-md-3 col-lg-3 col-xl-3 mx-auto d-none d-sm-block">
+                        
+                    </div>
+                    <div class="text-end col-xs-1 col-sm-3 col-md-3 col-lg-3 col-xl-3 mx-auto moverderecha mb-4">
+                        <a href="./comprar.html"><button class="boton4">Comprar</button></a>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="color-fondo mb-0">
+        <div class="display-footer">
+            <div class="borde-derecha">
+                <ul class="cambiar-texto-footer">
+                    <li><a href="" class="quitar-azul">La empresa</a></li>
+                    <li><a href="" class="quitar-azul">Productos</a></li>
+                    <li><a href="" class="quitar-azul">Quienes Somos</a></li>
+                    <li><a href="" class="quitar-azul">Servicios</a></li>
+                    <li><a href="" class="quitar-azul">Contacto</a></li>
+                </ul>
+            </div>
+    
+            <div class="alinear-centro borde-derecha">
+                <h3 class="color-blanco">¿Dónde encontrarnos?</h3>
+                <a href="" class="quitar-azul2">El Árbol 123. Santiago. <br> Región Metropolitana</a>
+            </div>
+    
+            <div class="alinear-centro">
+                <h3 class="color-blanco3">Contactos</h3>
+                <ul class="cambiar-texto-footer">
+                    <li><a href="" class="quitar-azul2">Instragram</a></li>
+                    <li><a href="" class="quitar-azul2">Facebook</a></li>
+                    <li><a href="" class="quitar-azul2">Twitter</a></li>
+                    <li><a href="" class="quitar-azul2">WhatsApp</a></li>
+                    <li><a href="" class="quitar-azul2">E-mail</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="alinear-centro">
+            <h2 class="color-distinto">Mega Games</h2>
+            <p class="color-distinto">Términos de uso Políticas de privacidad Política de derechos de autor</p>
+            <p class="color-distinto-tras">© 2024 Mega Games • Diseñado por: VisionWeb</p>    
+        </div>
+    </footer>
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

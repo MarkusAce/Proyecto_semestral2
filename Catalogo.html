@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+    <!--Falta poner los #a de inicio en todos los archivos html lo hara el marco-->
+    <header class="bajar">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                        <li class="nav-item separar_items">
+                            <a class="nav-link tam-fuente" aria-current="page" href="./index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item separar_items">
+                            <a class="nav-link tam-fuente" aria-current="page" href="./Nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item separar_items">
+                            <a class="nav-link active tam-fuente" href="./Catalogo.html">Juegos</a>
+                        </li>
+
+                        <li class="nav-item separar_items">
+                            <a class="nav-link tam-fuente d-block d-md-none d-lg-none d-xl-none d-xxl-none" href="#">Iniciar sesión</a>
+                        </li>
+
+                        <li class="nav-item separar_items">
+                            <a class="nav-link tam-fuente d-block d-md-none d-lg-none d-xl-none d-xxl-none" href="./carrito.html">Carrito</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <form class="d-flex flex-nowrap my-2 -my-lg-0">
+                    <div class="input-group"> 
+                        <input class="form-control mr-sm-2 controlar-forma" type="search" placeholder="Buscar" aria-label="Search">
+                        <a href="./Catalogo.html"><button class="btn btn-outline-success" type="button">🔎</button></a>
+                        <a class="quitar-link" href="./carrito.html"><button class="btn btn-outline-success d-none d-sm-block" type="button">🛒</button></a>
+                        <a href="./iniciar-sesion.html"><button class="btn btn-outline-success d-none d-sm-block" type="button">👤</button></a>
+                    </div>
+                </form>
+                
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="row col-11 mx-auto ">
+            <h1 class="centrar_titulo bajar tam-titulo">
+            <img  src="./assets/img/logoo.png" alt="Logo" class="logo">Mega Games</h1>
+            <a class="text-center" href="./Nosotros.html"><img src="./assets/img/mega_logo.jpeg" class=" mx-auto tamaño_foto_nosotros" alt="foto de contacto"></a>
+            <h2 class="bajar centrar_titulo tam-titulo2">Revisa Nuestro Catalogo!</h2>
+        </div>
+        <hr class="centrar_titulo">
+        </section>
+
+        <!--Consolas-->
+        <div class="row mt-2 "> 
+            <div class="dropdown emparejar"><h5>Filtrar por:&nbsp;</h5>
+
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Ninguno
+                </button>
+                <ul class="dropdown-menu">
+                <a class="quitar-diseño" href="./Ps4.html"><li><button class="dropdown-item " type="button">Playstation 4</button></li></a>
+                <a class="quitar-diseño" href="./Ps5.html"><li><button class="dropdown-item" type="button">Playstation 5</button></li></a>
+                <a class="quitar-diseño" href="./Nintendo.html"><li><button class="dropdown-item" type="button">Nintendo Switch</button></li></a>
+                <a class="quitar-diseño" href="./Xbox.html"><li><button class="dropdown-item" type="button">Xbox</button></li></a>
+                <a href="./Catalogo.html" class="dropdown-item quitar-diseño" type="button">Todos</button></li></a>
+                </ul>
+            </div>
+            <div class="conteiner-fluid">
+                <div class="row mt-4 mb-4">
+                    <!-- Ps5 -->
+                    <!--Hollow Knight-->
+                    <div class="text-center col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 mt-2 mx-auto mb-4">
+                        <div class="card mx-auto bordear tamaño-card">
+                            <a href="./hollowps5.html"><img src="./assets/IMG//Foto juegos/ps5-hollow-knight-voidheart-edition.jpg" class="card-img-top bordear tam_foto" alt="Hollow Knight"></a>
+                            <div class="card-body ">
+                            <p class="card-text"><a href="./hollowps5.html" class="texto-card">Hollow Knight <br> Ps5 Edition</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!--Final Fantasy VII Rebirth-->
+                    <div class="text-center col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 mt-2 mx-auto mb-4">
+                        <div class="card mx-auto bordear tamaño-card">
+                            <a href="./finalps5.html"><img src="./assets/IMG/Foto juegos/ps5-final-fantasy-vii-rebirth.jpg" class="card-img-top bordear tam_foto" alt="Final Fantasy VII Rebirth"></a>
+                            <div class="card-body">
+                            <p class="card-text"><a href="./finalps5.html" class="texto-card">Final Fantasy VII Rebirth <br> Ps5 Edition</a></p>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!--Grand Theft Auto V-->
+                    <div class="text-center col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 mt-2 mx-auto mb-4">
+                        <div class="card mx-auto bordear tamaño-card">
+                            <a href="./gtavps5.html"><img src="./assets/IMG/Foto juegos/ps5-grand-theft-auto-v-nueva-generacion.jpg" class="card-img-top bordear tam_foto" alt="Grand Theft Auto V"></a>
+                            <div class="card-body">
+                            <p class="card-text"><a href="./gtavps5.html" class="texto-card">Grand Theft Auto V <br> Ps5 Edition</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Cyberpunk 2077 -->
+                    <div class="text-center col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 mt-2 mx-auto mb-4">
+                        <div class="card mx-auto bordear tamaño-card">
+                            <a href="./cyberpunk.html"><img src="./assets/IMG/fotos/1624925518-cyberpunk-2077-ps5.jpg" class="card-img-top bordear tam_foto" alt="cyberpunk"></a>
+                            <div class="card-body">
+                            <p class="card-text"><a href="./cyberpunk.html" class="texto-card">Cyberpunk 2077<br> Ps5 Edition</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- fin ps5 -->
+        
+                    <!-- nintendo -->
+                    <!--Hollow Knight: Silksong-->
+                    <div class="text-center col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 mt-2 mx-auto mb-4">
+                        <div class="card mx-auto bordear tamaño-card">
+                            <a href="./silksong.html"><img src="./assets/IMG/Foto juegos/switch-hollow-knight-silksong.jpg" class="card-img-top bordear tam_foto" alt="Hollow Knight: Silksong"></a>
+                            <div class="card-body">
+                            <p class="card-text"><a href="./silksong.html" class="texto-card">Hollow Knight: Silksong <br> Nintendo Switch</a></p>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!--Mario vs Donkey kong-->
+                    <div class="text-center col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 mt-2 mx-auto mb-4">
+                        <div class="card mx-auto bordear tamaño-card">
+                            <a href="./mario.html"><img src="./assets/IMG/Foto juegos/switch-mario-vs-donkey-kong.jpg" class="card-img-top bordear tam_foto" alt="Mario vs donkey kong"></a>
+                            <div class="card-body">
+                            <p class="card-text"><a href="./mario.html" class="texto-card">Mario vs Donkey kong <br> Nintendo Switch</a></p>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!--Prince of Persia the lost crown-->
+                    <div class="text-center col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 mt-2 mx-auto mb-4">
+                        <div class="card mx-auto bordear tamaño-card">
+                            <a href="./principe.html"><img src="./assets/IMG/Foto juegos/switch-prince-of-persia-the-lost-crown.png" class="card-img-top bordear tam_foto" alt="Prince of Persia the lost crown"></a>
+                            <div class="card-body">
+                            <p class="card-text"><a href="./principe.html" class="texto-card">Prince of Persia the lost crown <br> Nintendo Switch</a></p>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!--Princess Peach Showtime-->
+                    <div class="text-center col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 mt-2 mx-auto mb-4">
+                        <div class="card mx-auto bordear tamaño-card">
+                            <a href="./princess.html"><img src="./assets/IMG/Foto juegos/switch-princess-peach-showtime.png" class="card-img-top bordear tam_foto" alt="Princess Peach Showtime"></a>
+                            <div class="card-body">
+                            <p class="card-text"><a href="./princess.html" class="texto-card">Princess Peach Showtime <br> Nintendo Switch</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--fin nintendo -->
+        
+                    <!-- xbox -->
+                    <!--Assassins Creed Unity-->
+                    <div class="text-center col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 mt-2 mx-auto mb-4">
+                        <div class="card mx-auto bordear tamaño-card">
+                            <a href="./Assassins.html"><img src="./assets/IMG/Foto juegos/xbox-series-xs-assassins-creed-unity.jpg" class="card-img-top bordear tam_foto" alt="Assasins Creed Unity"></a>
+                            <div class="card-body">
+                            <p class="card-text"><a href="./Assassins.html" class="texto-card">Assassins Creed Unity <br> Xbox SX Series</a></p>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!--Elden Ring-->
+                    <div class="text-center col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 mt-2 mx-auto mb-4">
+                        <div class="card mx-auto bordear tamaño-card">
+                            <a href="./elden.html"><img src="./assets/IMG/Foto juegos/xbox-series-xs-elden-ring.jpg" class="card-img-top bordear tam_foto" alt="Elden Ring"></a>
+                            <div class="card-body">
+                            <p class="card-text"><a href="./elden.html" class="texto-card">Elden Ring <br> Xbox SX Series</a></p>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!--Fallout 4 Game of the Year Edition-->
+                    <div class="text-center col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 mt-2 mx-auto mb-4">
+                        <div class="card mx-auto bordear tamaño-card">
+                            <a href="./fallout.html"><img src="./assets/IMG/Foto juegos/xbox-series-xs-fallout-4-game-of-the-year-edition.jpg" class="card-img-top bordear tam_foto" alt="Fallout 4"></a>
+                            <div class="card-body">
+                            <p class="card-text"><a href="./fallout.html" class="texto-card">Fallout 4 Game of the Year Edition<br> Xbox SX Series</a></p>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!--Rimworld console edition-->
+                    <div class="text-center col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 mt-2 mx-auto mb-4">
+                        <div class="card mx-auto bordear tamaño-card">
+                            <a href="./rimworld.html"><img src="./assets/IMG/Foto juegos/xbox-series-xs-rimworld-console-edition.jpg" class="card-img-top bordear tam_foto" alt="Rimworld console edition"></a>
+                            <div class="card-body">
+                            <p class="card-text"><a href="./rimworld.html" class="texto-card">Rimworld console edition <br> Xbox SX Series</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--fin xbox -->
+        
+                    <!-- ps4 -->
+                    <!--God of War Ragnarok-->
+                    <div class="text-center col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 mt-2 mx-auto mb-4">
+                        <div class="card mx-auto bordear tamaño-card">
+                            <a href="./gow.html"><img src="./assets/IMG/Foto juegos/ps4-god-of-war-ragnarok.jpg" class="card-img-top bordear tam_foto" alt="God of War Ragnarok"></a>
+                            <div class="card-body">
+                            <p class="card-text"><a href="./gow.html" class="texto-card">God of War Ragnarok <br> Ps4 Edition</a></p>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!--Grand theft auto the trilogy-->
+                    <div class="text-center col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 mt-2 mx-auto mb-4">
+                        <div class="card mx-auto bordear tamaño-card">
+                            <a href="./gtatrilo.html"><img src="./assets/IMG/Foto juegos/ps4-grand-theft-auto-the-trilogy-the-definitive-edition.jpg" class="card-img-top bordear tam_foto" alt="CALL OF DUTY MODERN WARFARE"></a>
+                            <div class="card-body">
+                            <p class="card-text"><a href="./gtatrilo.html" class="texto-card"> Grand theft auto the trilogy<br> Ps4 Edition </a></p>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!--It takes two-->
+                    <div class="text-center col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 mt-2 mx-auto mb-4">
+                        <div class="card mx-auto bordear tamaño-card">
+                            <a href="./it2.html"><img src="./assets/IMG/Foto juegos/ps4-it-takes-two.jpg" class="card-img-top bordear tam_foto" alt="ARK SURVIVAL ASCENDED"></a>
+                            <div class="card-body">
+                            <p class="card-text"><a href="./it2.html" class="texto-card">It takes two <br> Ps4 Edition</a></p>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!--No mans Sky-->
+                    <div class="text-center col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 mt-2 mx-auto mb-4">
+                        <div class="card mx-auto bordear tamaño-card">
+                            <a href="./noman.html"><img src="./assets/img/Foto juegos/ps4-no-mans-sky.jpg" class="card-img-top bordear tam_foto" alt="MORTAL KOMBAT 11 ULTIMATE"></a>
+                            <div class="card-body">
+                            <p class="card-text"><a href="./noman.html" class="texto-card"> No mans Sky <br> Ps4 Edition</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- fin ps4 -->
+                    <!-- fin div -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="color-fondo mb-0">
+        <div class="display-footer">
+            <div class="borde-derecha">
+                <ul class="cambiar-texto-footer">
+                    <li><a href="./Nosotros.html" class="quitar-azul">La empresa</a></li>
+                    <li><a href="./Catalogo.html" class="quitar-azul">Productos</a></li>
+                    <li><a href="./Nosotros.html" class="quitar-azul">Quienes Somos</a></li>
+                    <li><a href="./index.html" class="quitar-azul">Servicios</a></li>
+                    <li><a href="./Nosotros.html" class="quitar-azul">Contacto</a></li>
+                </ul>
+            </div>
+    
+            <div class="alinear-centro borde-derecha">
+                <h3 class="color-blanco">¿Dónde encontrarnos?</h3>
+                <a href="https://www.google.com/maps" class="quitar-azul2">El Árbol 123. Santiago. <br> Región Metropolitana</a>
+            </div>
+    
+            <div class="alinear-centro">
+                <h3 class="color-blanco3">Contactos</h3>
+                <ul class="cambiar-texto-footer">
+                    <li><a href="https://www.instagram.com" class="quitar-azul2">Instragram</a></li>
+                    <li><a href="https://web.facebook.com/?locale=es_LA&_rdc=1&_rdr" class="quitar-azul2">Facebook</a></li>
+                    <li><a href="https://twitter.com/?lang=es" class="quitar-azul2">Twitter</a></li>
+                    <li><a href="https://www.whatsapp.com/?lang=es_LA" class="quitar-azul2">WhatsApp</a></li>
+                    <li><a href="https://www.google.com/intl/es-419/gmail/about/" class="quitar-azul2">E-mail</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="alinear-centro">
+            <h2 class="color-distinto">Mega Games</h2>
+            <p class="color-distinto">Términos de uso Políticas de privacidad Política de derechos de autor</p>
+            <p class="color-distinto-tras">© 2024 Mega Games • Diseñado por: VisionWeb</p>    
+        </div>
+    </footer>
+
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
