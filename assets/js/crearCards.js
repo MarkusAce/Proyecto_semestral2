@@ -1,6 +1,8 @@
 import { verProducto } from "./verProducto.js";
 
-export const crearCard = (juegos) =>{
+export const crearCard = () =>{
+
+    const juegos = JSON.parse(localStorage.getItem('ArregloDeJuegos'));
 
     let juegosRow = document.getElementById("juegosRow")
 
@@ -24,7 +26,9 @@ export const crearCard = (juegos) =>{
         card.classList.add("bordear");
         card.classList.add("tamaño-card");
         card.addEventListener("click", ()=>{
+
             verProducto(juego);
+
         });
 
         const img = document.createElement("img");
@@ -56,4 +60,60 @@ export const crearCard = (juegos) =>{
 
         juegosRow.appendChild(divRow);
     })
+}
+
+export const juegosCarrusel = ()=>{
+
+    const juegos = JSON.parse(localStorage.getItem('ArregloDeJuegos'));
+
+    const imagenSilksong = document.getElementById('imagenSilksong');
+    const imagenGtaTrilo = document.getElementById('imagenGtaTrilo');
+    const imagenCyber = document.getElementById('imagenCyber');
+
+    imagenSilksong.addEventListener('click',()=>{
+        const juegoEncontrado = juegos.find(juego =>juego.id === 12);
+        verProducto(juegoEncontrado)
+    })
+    imagenGtaTrilo.addEventListener('click',()=>{
+        const juegoEncontrado = juegos.find(juego =>juego.id === 37);
+        verProducto(juegoEncontrado)
+    })
+    imagenCyber.addEventListener('click',()=>{
+        const juegoEncontrado = juegos.find(juego =>juego.id === 3);
+        verProducto(juegoEncontrado)
+    })
+};
+
+
+export function juegosPorConsola(juegoConsola){
+
+    const ArregloJuegos = JSON.parse(localStorage.getItem('ArregloDeJuegos'));
+    const juegosConsola = ArregloJuegos.filter(juego => juego.consola.includes(juegoConsola.consola));
+    var indiceJuego = encontrarIndicePorId(juegoConsola.id, juegosConsola);
+
+    var esTrue = false;
+    var numAleatorio, numAleatorio2;
+
+    while(!esTrue){
+        numAleatorio = Math.floor(Math.random()*12);
+        if (indiceJuego !== numAleatorio){
+            numAleatorio2 = Math.floor(Math.random()*12);
+            if (numAleatorio !== numAleatorio2 && numAleatorio2!==indiceJuego){
+                esTrue = true;
+            }
+        }   
+    };
+    var juego = juegosConsola[numAleatorio];
+    
+    var juego2 = juegosConsola[numAleatorio2];
+    return [juego,juego2];
+}
+
+function encontrarIndicePorId(id, juegosConsola) {
+    for (var i = 0; i < juegosConsola.length; i++) {
+        if (juegosConsola[i].id === id) {
+            return i; 
+            
+        }
+    }
 }

@@ -1,4 +1,4 @@
-import { crearCard } from "./crearCards.js";
+import { crearCard, juegosCarrusel } from "./crearCards.js";
 
 const obtenerJuegos = async () =>{
     try{
@@ -8,6 +8,7 @@ const obtenerJuegos = async () =>{
             throw new Error('La solicitud no fue exitosa');
         }
         const data = await response.json();
+
         return data;
     }catch(error){
         console.error(`Error al obtener juegos: ${error.message}`);
@@ -17,7 +18,10 @@ const obtenerJuegos = async () =>{
 
 obtenerJuegos()
 .then((juegos) =>{
-    crearCard(juegos);
+    localStorage.setItem('ArregloDeJuegos', JSON.stringify(juegos));
+    crearCard();
+    juegosCarrusel();
+
 })
 .catch(error=> {
     console.error(`Error al obtener juegos: ${error.message}`);

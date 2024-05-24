@@ -461,6 +461,15 @@ html, body{/*Fondo de pantalla*/
     cursor: pointer;
     
 }
+#imagenSilksong:hover{
+    cursor:pointer;
+}
+#imagenGtaTrilo:hover{
+    cursor:pointer;
+}
+#imagenCyber:hover{
+    cursor:pointer;
+}
 
 
 @media screen and (max-width: 320px) {
