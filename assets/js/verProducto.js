@@ -13,6 +13,8 @@ export const verProducto = (juego) => {
         const parser = new DOMParser();
         const doc = parser.parseFromString(html, 'text/html');
 
+        
+
         const imagePage = doc.getElementById('imagePage');
         imagePage.src = juego.img;
 
@@ -52,10 +54,31 @@ export const verProducto = (juego) => {
 
         const subtituloJuego2Page = doc.getElementById('subtituloJuego2Page');
         subtituloJuego2Page.textContent = juegosRandom[1].consola;
+        
 
         const nuevoHTML = new XMLSerializer().serializeToString(doc);
 
         document.body.innerHTML = nuevoHTML;
+
+        const botonRestarPage = document.getElementById('botonRestarPage');
+        const numeroPage = document.getElementById('numeroPage');
+        
+        botonRestarPage.addEventListener('click', () => {
+            if (parseInt(numeroPage.value) <= 0){
+                alert("No hay articulos que restar")
+            }else{
+                numeroPage.value=parseInt(numeroPage.value)-1
+            }
+        });
+        const botonSumarPage = document.getElementById('botonSumarPage');
+        botonSumarPage.addEventListener('click', () => {
+            if (parseInt((cantidadPage.textContent.substring(0,2))) === parseInt(numeroPage.value)) {
+                alert("No se puede agregar más de la cantidad disponible")
+            }else{
+            numeroPage.value=parseInt(numeroPage.value)+1
+            }
+            
+        });
         irJuegoRandom(juegosRandom);
     })
     .catch((error)=>{
@@ -76,3 +99,10 @@ const irJuegoRandom = (juegosPorConsola)=>{
     )
 }
 
+
+const restarBoton = (botonRestarPage)=>{
+    botonRestarPage.addEventListener('click', function(){
+        console.log(botonRestarPage);
+    })
+
+}
