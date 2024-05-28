@@ -13,15 +13,12 @@ export const verProducto = (juego) => {
         const parser = new DOMParser();
         const doc = parser.parseFromString(html, 'text/html');
 
-        
-
         const imagePage = doc.getElementById('imagePage');
         imagePage.src = juego.img;
 
         const titlePage = doc.getElementById('titlePage');
         titlePage.textContent = juego.name + " - " +juego.consola;
         
-
         const descripcionPage = doc.getElementById('descripcionPage');
         descripcionPage.textContent = juego.descripcion;
 
@@ -70,6 +67,7 @@ export const verProducto = (juego) => {
                 numeroPage.value=parseInt(numeroPage.value)-1
             }
         });
+
         const botonSumarPage = document.getElementById('botonSumarPage');
         botonSumarPage.addEventListener('click', () => {
             if (parseInt((cantidadPage.textContent.substring(0,2))) === parseInt(numeroPage.value)) {
@@ -77,8 +75,8 @@ export const verProducto = (juego) => {
             }else{
             numeroPage.value=parseInt(numeroPage.value)+1
             }
-            
         });
+
         irJuegoRandom(juegosRandom);
     })
     .catch((error)=>{
@@ -97,12 +95,4 @@ const irJuegoRandom = (juegosPorConsola)=>{
         verProducto(juegosPorConsola[1]);
     }
     )
-}
-
-
-const restarBoton = (botonRestarPage)=>{
-    botonRestarPage.addEventListener('click', function(){
-        console.log(botonRestarPage);
-    })
-
 }

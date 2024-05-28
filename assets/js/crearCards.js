@@ -1,11 +1,9 @@
 import { verProducto } from "./verProducto.js";
 
-export const crearCard = () =>{
-
-    const juegos = JSON.parse(localStorage.getItem('ArregloDeJuegos'));
-
+export const crearCard = (juegos) =>{
     let juegosRow = document.getElementById("juegosRow")
 
+    juegosRow.innerHTML="";
     juegos.map((juego)=>{
         const { name, consola, img : imagen} = juego;
 
