@@ -643,3 +643,9 @@ html, body{/*Fondo de pantalla*/
         font-size: 1.1rem;
     }
 }
+/*-----------------------------------*/
+.perfil{
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+}
