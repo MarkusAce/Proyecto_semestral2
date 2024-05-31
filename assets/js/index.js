@@ -14,19 +14,23 @@ const obtenerJuegos = async () =>{
     }
 }
 
-obtenerJuegos()
-.then((juegos) =>{
-    localStorage.setItem('ArregloDeJuegos', JSON.stringify(juegos));
+(async () =>{
+    try {
+        let juegos;
+        if (!localStorage.getItem('ArregloDeJuegos')){
+            juegos = await obtenerJuegos();
+            localStorage.setItem('ArregloDeJuegos', JSON.stringify(juegos));
+        }else{
+            juegos = JSON.parse(localStorage.getItem('ArregloDeJuegos'));
+        }
 
-    var pagVerdadero = indexPage();
+        const pagVerdadero = indexPage();
+        crearCard(juegos);
 
-    crearCard(JSON.parse(localStorage.getItem('ArregloDeJuegos')));
-
-    if (pagVerdadero===true){
-        juegosCarrusel();
+        if (pagVerdadero === true){
+            juegosCarrusel();
+        }
+    }catch(error){
+        console.error(`Error al obtener juegos: ${error.message}`);
     }
-    
-})
-.catch(error=> {
-    console.error(`Error al obtener juegos: ${error.message}`);
-});
+})();

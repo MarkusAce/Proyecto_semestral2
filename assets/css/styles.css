@@ -1,42 +1,28 @@
 .bg-nav{
     background-color: rgba(174, 183, 179, 1)!important;
 }
-/*--------------------------------------------------------------------------------------------------------------------*/
 html, body{/*Fondo de pantalla*/
     background-color: #023C40;
     overflow-x: hidden;
 }
-/*--------------------------------------------------------------------------------------------------------------------*/
-.bajar{/*Bajar un poco el nav*/
-    padding-top: 1rem;
-}
-/*--------------------------------------------------------------------------------------------------------------------*/
 .centrar_titulo{/*Centrar titulo Mega Games*/
     text-align: center;
     color: #AEB7B3;
 }
-/*--------------------------------------------------------------------------------------------------------------------*/
 .tamaño{/*tamaño carrusel*/
     max-height: 800px;
     min-height: 220px;
     min-width: 317px;
 }
-/*--------------------------------------------------------------------------------------------------------------------*/
 .separar_items{/*Separar el navbar : inicio, nosotros, juegos, iniciar session, registrarse*/
     padding-right: 1rem;
 }
-/*--------------------------------------------------------------------------------------------------------------------*/
-.inicio{/*Padding-left : para que nos que tan pegado a la izquierda*/
-    padding-left: 2rem;
-}
-/*--------------------------------------------------------------------------------------------------------------------*/
 .bordear{ /*Bordear fotos*/
     border-radius: 1rem;
 }
 .bordear2{
     border-radius: .5rem;
 }
-/*--------------------------------------------------------------------------------------------------------------------*/
 .tam_foto{ /*Se ocupo para poner del mismo tamaño las mascotas en adopta.html*/
     height: 20rem;
     width: 100%;
@@ -49,7 +35,6 @@ html, body{/*Fondo de pantalla*/
 }
 .tamaño-card{
     width: 20rem;
-    
 }
 .texto-card{
     text-decoration: none;
@@ -57,68 +42,32 @@ html, body{/*Fondo de pantalla*/
     font-size: 1.1rem;
     font-weight: 600;
 }
-/*--------------------------------------------------------------------------------------------------------------------*/
 .btn:hover{ /*Diseño de lupa, carrito y perfil*/
     background-color: #023C40;
 }
-/*--------------------------------------------------------------------------------------------------------------------*/
-
-
-.nav-nuevo{
-    background-color:#AEB7B3;
-    height: 50px;
-    display: flex;
-    justify-content: left;
-}
-
-.quitar-puntos{
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-}
-
-.espacio-il{
-    padding: 15px;
-}
-.color-il{
-    text-decoration: none;
-    color: black;
-    font-size: bold;
-}
-
-.mover-derecha{
-    margin-right: 10px;
-}
-
 .logo{
     display: inline-block;
     max-width: 75px;
     max-height: 75px;
 }
-
 .tam-fuente{
     font-size: 1.5rem;
 }
-
 .tam-titulo{
     font-size: 4rem;
 }
 .tam-titulo2{
     font-size: 3rem;
 }
-
 .color-fondo{
     background-color: #22333B;
 }
-
 .display-footer{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
 }
-
 .cambiar-texto-footer{
     list-style-type: none;
     padding: 0;
@@ -131,7 +80,6 @@ html, body{/*Fondo de pantalla*/
     text-decoration: none;
     color: #AEB7B3;
 }
-
 .color-blanco{
     margin-bottom: 2rem;
     color: white;
@@ -139,14 +87,6 @@ html, body{/*Fondo de pantalla*/
 .color-blanco2{
     color: white;
 }
-.color-blanco3{
-    color: white;
-}
-
-.alinear-centro{
-    text-align: center;
-}
-
 .borde-derecha{
     border-right: 2px solid #AEB7B3;
     padding-right: 10vw;
@@ -165,16 +105,12 @@ html, body{/*Fondo de pantalla*/
 .controlar-forma{
     max-width: 207px;
 }
-
-
-/* ------------------------------------------------------ */
 .cuadrado{
     background-color: #AEB7B3;
     width: 90%;
     height: 50%;
     margin-bottom: 1rem;
 }
-
 .centrar-texto{
     text-align: center;
     color: black;
@@ -220,7 +156,6 @@ html, body{/*Fondo de pantalla*/
 .negrita{
     font-weight: bold;
 }
-
 .texto{
     font-size: 1.5rem;
 }
@@ -229,14 +164,10 @@ html, body{/*Fondo de pantalla*/
     width: 100px;
     border-radius: 20%;
 }
-
-/*color letra*/
 .color-letra{
     color: #eee;
 }
-
 /*registrarse*/
-
 .tam-perfil1{ 
     height: 200px;
     width: 200px;
@@ -246,11 +177,6 @@ html, body{/*Fondo de pantalla*/
     display: flex;
     align-items: center;
 }
-
-.texto{
-    text-align: center;
-}
-
 .separar{
     margin-bottom: 20px;
 }
@@ -341,7 +267,7 @@ html, body{/*Fondo de pantalla*/
     padding-top: 1rem;
 }
 .centrar-titulo2{
-    text-align: justify; /*Justify = justificar el texto*/
+    text-align: justify;
     color: black;
 }
 .tamaño_foto_nosotros{
@@ -432,29 +358,16 @@ html, body{/*Fondo de pantalla*/
     min-width: 10px;
 }
 
-.boton3{
-    margin-bottom: 10px;
-}
-.boton4{
-    border-radius: 20%;
-}
-
 .boton-eliminar{
     background-color: transparent;
 }
-
 .moverizquierda{
     padding-left: 1rem;
-}
-
-.moverderecha{
-    padding-right: 1rem;
 }
 .letras-carrito{
     font-size: 1.3rem;
 }
 .borde10{
-
     padding: 1rem;
     display: flex;
     flex-direction: column;
@@ -472,6 +385,13 @@ html, body{/*Fondo de pantalla*/
 }
 #imagenCyber:hover{
     cursor:pointer;
+}
+.anchar-boton{
+    height: 3.2vh;
+}
+.anchar-boton:hover{
+    background-color: rgba(174, 183, 179, 1);
+    transition: 0.15s all ease;
 }
 
 
