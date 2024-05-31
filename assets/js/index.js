@@ -30,6 +30,16 @@ const obtenerJuegos = async () =>{
         if (pagVerdadero === true){
             juegosCarrusel();
         }
+        window.onload = async () => {
+            // Obtener el juego a buscar desde la URL (si lo pasaste por parámetros)
+            const params = new URLSearchParams(window.location.search);
+            const juegoABuscar = params.get('juego');
+            
+            if (juegoABuscar) {
+                // Si hay un juego a buscar, llamar a la función buscarJuego
+                await buscarJuego(juegoABuscar);
+            }
+        };
     }catch(error){
         console.error(`Error al obtener juegos: ${error.message}`);
     }
