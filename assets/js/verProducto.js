@@ -1,4 +1,5 @@
 import { juegosPorConsola } from "./crearCards.js";
+import { botonComprar3 } from "./botonComprar.js";
 
 export const verProducto = (juego) => {
     
@@ -59,7 +60,7 @@ export const verProducto = (juego) => {
 
         const botonRestarPage = document.getElementById('botonRestarPage');
         const numeroPage = document.getElementById('numeroPage');
-        
+
         botonRestarPage.addEventListener('click', () => {
             if (parseInt(numeroPage.value) <= 0){
                 alert("No hay articulos que restar")
@@ -73,10 +74,25 @@ export const verProducto = (juego) => {
             if (parseInt((cantidadPage.textContent.substring(0,2))) === parseInt(numeroPage.value)) {
                 alert("No se puede agregar más de la cantidad disponible")
             }else{
-            numeroPage.value=parseInt(numeroPage.value)+1
+                numeroPage.value=parseInt(numeroPage.value)+1
             }
         });
 
+        const nombre = titlePage.textContent;
+        const precio = precioPage.textContent;
+        const cantidad = numeroPage.value;
+
+        // Recuperar la lista del local storage
+        let juegosCarrito = JSON.parse(localStorage.getItem('carritos'));
+
+        // Verificar si el carrito está vacío o no existe
+        if (!Array.isArray(juegosCarrito)) {
+            juegosCarrito = [];
+        }
+        
+        botonComprar3(nombre, precio, cantidad, juegosCarrito);
+
+        
         irJuegoRandom(juegosRandom);
     })
     .catch((error)=>{
@@ -96,3 +112,4 @@ const irJuegoRandom = (juegosPorConsola)=>{
     }
     )
 }
+

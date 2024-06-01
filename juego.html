@@ -59,50 +59,49 @@
     <hr class="bajar centrar_titulo">
 
     <main>
-        <section class="cuadrado bordear mx-auto">
-            <h2 id="titlePage" class="centrar-texto"></h2>
-           <div>
-            
-           </div>
-            <div class="container-fluid">
-                <div class="row ">
-                    <div class="col-xs-12 col-md-6 col-lg-5 col-xl-5 col-xxl-4 text-center mb-2 tam-foto2">
-                        <img id="imagePage" src="" class="img-fluid " alt="Imagen del juego">
-                    </div>
-                    
-
-                    <div class="col-xs-12 col-md-6 col-lg-7 col-xl-7 col-xxl-6">
-                        <p id="descripcionPage" class="texto"></p>
-
-                        <div class="col-xxl-2"></div> 
-
-                        <div class="d-flex justify-content-center mb-4">
-                            <div class="d-flex cuadro-genero bordear2">Metroidvania</div>
-                            <div class="d-flex cuadro-genero bordear2">Acción</div>
-                            <div class="d-flex cuadro-genero bordear2">Indie</div>
-                            <div class="d-flex cuadro-genero2 bordear2">Aventura</div>
-                            
-                        </div>
-                        <div class="d-flex justify-content-center"><p id="cantidadEstiloPage" class=" texto negrita"></p><p id="cantidadPage" class="texto"></p></div>
-                        
-                        <div class="d-flex justify-content-center">
-                            <div class="d-flex">
-                                <div><button id="botonRestarPage" class="bg-danger tamaño-cuadro2 rounded-start">-</button></div>
-                                <div><input id="numeroPage" type="text" class="tamaño-cuadro text-center" value="1"></div>
-                                <div><button id="botonSumarPage" class="bg-success tamaño-cuadro2 rounded-end">+</button></div>
-                            </div>
-
-                            <img class="tamaño-fav" src="./assets/img/favorito.png" alt="imagen fav">
-                        </div>
-
-                        <div class="d-flex justify-content-center texto"><p id="precioEstiloPage" class="negrita"></p><p id="precioPage"></p></div>
-
-                        <div class="d-flex cuadro-genero2 bordear2 mx-auto mt-4 mb-4"><a class="quitar-azul3" href="./carrito.html">Comprar</a></div>
-                        <div>
-                        </div>
-                    </div>
-                </div>
+        <section class="cuadrado bordear mx-auto" id="producto">
+            <div id="productos"  data-nombre="titlePage" data-img="imagePage" data-precio="precioPage" data-cantidad="cantidadPage">
+                <h2 id="titlePage" class="centrar-texto"></h2>
+                 <div class="container-fluid">
+                     <div class="row ">
+                         <div class="col-xs-12 col-md-6 col-lg-5 col-xl-5 col-xxl-4 text-center mb-2 tam-foto2">
+                             <img id="imagePage" src="" class="img-fluid " alt="Imagen del juego">
+                         </div>
+                         
+     
+                         <div class="col-xs-12 col-md-6 col-lg-7 col-xl-7 col-xxl-6">
+                             <p id="descripcionPage" class="texto"></p>
+     
+                             <div class="col-xxl-2"></div> 
+     
+                             <div class="d-flex justify-content-center mb-4">
+                                 <div class="d-flex cuadro-genero bordear2">Metroidvania</div>
+                                 <div class="d-flex cuadro-genero bordear2">Acción</div>
+                                 <div class="d-flex cuadro-genero bordear2">Indie</div>
+                                 <div class="d-flex cuadro-genero2 bordear2">Aventura</div>
+                                 
+                             </div>
+                             <div class="d-flex justify-content-center"><p id="cantidadEstiloPage" class=" texto negrita"></p><p id="cantidadPage" class="texto"></p></div>
+                             
+                             <div class="d-flex justify-content-center">
+                                 <div class="d-flex">
+                                     <div><button id="botonRestarPage" class="bg-danger tamaño-cuadro2 rounded-start">-</button></div>
+                                     <div><input id="numeroPage" type="text" class="tamaño-cuadro text-center" value="1"></div>
+                                     <div><button id="botonSumarPage" class="bg-success tamaño-cuadro2 rounded-end">+</button></div>
+                                 </div>
+     
+                                 <img class="tamaño-fav" src="./assets/img/favorito.png" alt="imagen fav">
+                             </div>
+     
+                             <div class="d-flex justify-content-center texto"><p id="precioEstiloPage" class="negrita"></p><p id="precioPage"></p></div>
+     
+                             <button id="botonComprar" class="d-flex cuadro-genero2 bordear2 mx-auto mt-4 mb-4"><a class="quitar-azul3" href="">Comprar</a></button>
+                         </div>
+                     </div>
+                 </div>
+                
             </div>
+        
         </section>
 
         <div class="cuadrado bordear2 mx-auto">
@@ -126,12 +125,18 @@
                         <div class="card-body">
                             <p id="tituloJuego2Page" class="card-text texto-card"></p>
                             <p id="subtituloJuego2Page" class="card-text texto-card"></p>
-                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
             
         </div>
+
+        <!-- <h6>Carrito de Compras</h6>
+        <ul id="Carrito">
+
+        </ul> -->
+        
     </main>
 
     <footer class="color-fondo mb-0">
@@ -172,5 +177,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script type="module" src="./assets/js/verProducto.js"></script>
+    <script type="module" src="./assets/js/juego.js"></script>
 </body>
 </html>
