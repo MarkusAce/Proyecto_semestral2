@@ -1,8 +1,6 @@
 import { crearCard, juegosCarrusel } from "./crearCards.js";
 import { getJuegos } from "./getJuegos.js";
-// import { getJuegosID } from "./getJuegosID.js";
-// import { getJuegosConsola } from "./getJuegosConsola.js";
-import { indexPage } from "./indexPage.js";
+import { indexPage } from "./paginas.js";
 
 const obtenerJuegos = async () =>{
     try{
@@ -25,21 +23,10 @@ const obtenerJuegos = async () =>{
         }
 
         const pagVerdadero = indexPage();
-        crearCard(juegos);
-
         if (pagVerdadero === true){
             juegosCarrusel();
+            crearCard(juegos);
         }
-        window.onload = async () => {
-            // Obtener el juego a buscar desde la URL (si lo pasaste por parámetros)
-            const params = new URLSearchParams(window.location.search);
-            const juegoABuscar = params.get('juego');
-            
-            if (juegoABuscar) {
-                // Si hay un juego a buscar, llamar a la función buscarJuego
-                await buscarJuego(juegoABuscar);
-            }
-        };
     }catch(error){
         console.error(`Error al obtener juegos: ${error.message}`);
     }

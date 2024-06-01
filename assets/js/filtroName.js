@@ -1,10 +1,12 @@
- import { crearCard, juegosCarrusel } from "./crearCards.js";
+ import { crearCard } from "./crearCards.js";
  import { getJuegosName } from "./getJuegosName.js";
 
  const buscarJuegoPage = document.getElementById('buscarJuegoPage');
+ const botonBuscarPage = document.getElementById('botonBuscarPage');
 
  let juegoABuscar = '';
- const buscarJuego = async (juegoABuscar)=>{
+
+ export const buscarJuego = async (juegoABuscar)=>{
      try {
          const data = await getJuegosName(juegoABuscar);
          crearCard(data);
@@ -13,19 +15,25 @@
      }
  };
 
+ const ejecutarBusqueda = async () =>{
+    if (juegoABuscar || juegoABuscar === "Buscar"){
+        crearCard(JSON.parse(localStorage.getItem('ArregloDeJuegos')));
+    }else{
+        await buscarJuego(juegoABuscar);
+    }
+    localStorage.setItem('juegoABuscar',JSON.stringify(juegoABuscar));
+    window.location.href = './Catalogo.html';
+ };
+
  buscarJuegoPage.addEventListener('keydown', async (event) => {
     if (event.key === 'Enter') {
-        event.preventDefault(); // Evitar el comportamiento por defecto del formulario
+        event.preventDefault();
         juegoABuscar = event.target.value;
-        if (!juegoABuscar || juegoABuscar=== "Buscar"){
-            crearCard(JSON.parse(localStorage.getItem('ArregloDeJuegos')));
-        }else{
-            buscarJuego(juegoABuscar);
-        }
-         window.location.href = './Catalogo.html';
-         window.onload = async () => {
-             await buscarJuego(juegoABuscar);
-            
-         };
+        await ejecutarBusqueda();
     }
 });
+botonBuscarPage.addEventListener('click', async (event)=>{
+    event.preventDefault();
+    juegoABuscar = buscarJuegoPage.value;
+    await ejecutarBusqueda();
+})
