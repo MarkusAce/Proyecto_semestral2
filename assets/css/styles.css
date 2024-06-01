@@ -2,6 +2,7 @@
     background-color: rgba(174, 183, 179, 1)!important;
 }
 html, body{/*Fondo de pantalla*/
+    height: 100%;
     background-color: #023C40;
     overflow-x: hidden;
 }
@@ -35,6 +36,10 @@ html, body{/*Fondo de pantalla*/
 }
 .tamaño-card{
     width: 20rem;
+}
+.tamaño-carrito{
+    max-width: 270px;
+    max-height: 300px;
 }
 .texto-card{
     text-decoration: none;
@@ -393,6 +398,21 @@ html, body{/*Fondo de pantalla*/
     background-color: rgba(174, 183, 179, 1);
     transition: 0.15s all ease;
 }
+.fondo-carrito{
+   background-color: #AEB7B3;
+}
+.fondo-altura{
+    max-height: 20vh;
+}
+.fuente-letra{
+    font-size: 2.5vw;
+}
+.boton-grande{
+    min-height: 1rem;
+    min-width: 6rem;
+    height: 4.5vh;
+    width: 6vw;
+}
 
 
 @media screen and (max-width: 320px) {
@@ -472,6 +492,9 @@ html, body{/*Fondo de pantalla*/
     .letras-carrito{
         font-size: .7rem;
     }
+    .despegar-pantalla{
+        margin-right: 1vw;
+    }
 }
 @media screen and (min-width:321px) and (max-width: 575px) {
     .tam-titulo{
@@ -527,7 +550,7 @@ html, body{/*Fondo de pantalla*/
         font-size: 1rem;
     }
     .letras-carrito{
-        font-size: .8rem;
+        font-size: .6rem;
     }
 }
 

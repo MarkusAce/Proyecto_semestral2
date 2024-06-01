@@ -48,81 +48,42 @@
             </div>
         </nav>
     </header>
-    <main>
-        <div>
-            <h1 class="centrar_titulo mt-3 tam-titulo">
-            <img  src="./assets/img/logoo.png" alt="Logo" class="logo">Mega Games</h1>
-            <hr class="centrar_titulo mb-4">
-        </div>
-        <section class="cuadrado
-                        bordear
-                        mx-auto" >
-            <h4 class="container">
-                Carrito De Compra
-            </h4>
-            <hr>
-            <div class="conteiner-fluid">
-                <div class="row">
-                    <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 col-xl-3 mx-auto">
-                        <p class="text-start moverizquierda letras-carrito">Tus Productos</p>
+    <main class="container-fluid mx-auto">
+        <div class="row">
+            <div class="col-xs-6 col-sm-12 col-md-6 col-lg-6 col-xl-6 py-0 px-0 fondo-carrito mx-2 mt-2 bordear2">
+                <h4 class="text-center mt-1">Carrito de Compra</h4>
+                <hr>
+                <div class="container">
+                    <div class="row d-flex">
+                        <div class="col-5 col-md-5 col-lg-4 text-center negrita">Tus Productos</div>
+                        <div class="col-3 col-md-4 col-lg-4 text-center negrita">Cantidad</div>
+                        <div class="col-4 col-md-3 col-lg-4 text-center negrita">Precio</div>
                     </div>
-                    <div class="text-center col-xs-0 col-sm-3 col-md-3 col-lg-3 col-xl-3 mx-auto d-none d-sm-block">
-                        <p class="letras-carrito">Precio</p>
-                    </div>
-                    <div class="text-center col-xs-0 col-sm-3 col-md-3 col-lg-3 col-xl-3 mx-auto d-none d-sm-block">
-                        <p class="letras-carrito">Cantidad</p>
-                    </div>
-                    <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 col-xl-3 mx-auto">
-                        <p class="text-end separar_items letras-carrito">Subtotal</p>
-                    </div>
-
-                    <div class="text-start col-xs-6 col-sm-3 col-md-3 col-lg-3 col-xl-3 mx-auto moverizquierda">
-                        <img src="./assets/img/Foto juegos/ps5-hollow-knight-voidheart-edition.jpg" class="img-fluid mover-img tamaño2" alt="Imagen Hollow Knight">
-                    </div>
-
-                    <div class="text-center col-xs-1 col-sm-3 col-md-3 col-lg-3 col-xl-3 mx-auto d-none d-sm-block">
-                        <p class="letras-carrito">$ 16.000</p>
-                    </div>
-                    <div class="text-center col-xs-1 col-sm-3 col-md-3 col-lg-3 col-xl-3 mx-auto d-none d-sm-block">
-                        <input type="number" name="" class="numeros" value="1" min="0" max="100" step="1">
-                    </div>
-                    <div class="text-center col-xs-6 col-sm-3 col-md-3 col-lg-3 col-xl-3 mx-auto">
-                        <p class="text-end separar_items letras-carrito">$ 16.000</p>
-                    </div>
-                    <div class="text-start col-xs-12 col-sm-3 col-md-3 col-lg-3 col-xl-3 mx-auto moverizquierda">
-                        <h6 class="letras-carrito">Hollow Knight - PS5 Edition</h6>
-                            <p class="letras-carrito">Envío: Envío en 1 Día Hábil <br>
-                            Stock: Disponible</p>
-                    </div>
-                    <div class="text-center col-xs-1 col-sm-3 col-md-3 col-lg-3 col-xl-3 mx-auto d-none d-sm-block">
-                        
-                    </div>
-                    <div class="text-center col-xs-1 col-sm-3 col-md-3 col-lg-3 col-xl-3 mx-auto d-none d-sm-block">
-                        
-                    </div>
-                    <div class="text-end col-xs-1 col-sm-3 col-md-3 col-lg-3 col-xl-3 mx-auto separar_items d-none d-sm-block">
-                        <button class="boton-eliminar">
-                            <img src="./assets/img/basurero.png" alt="eliminar" class="img-fluid mover-img tamaño3">
-                        </button>
-                    </div>
-                    <div class="text-start col-xs-1 col-sm-3 col-md-3 col-lg-3 col-xl-3 mx-auto moverizquierda d-none d-sm-block">
-                        <button class="bordear2"><a href="./index.html" class="quitar-diseño">Seguir Mirando</a></button>
-                    </div>
-                    <div class="text-center col-xs-1 col-sm-3 col-md-3 col-lg-3 col-xl-3 mx-auto d-none d-sm-block">
-                        
-                    </div>
-                    <div class="text-center col-xs-1 col-sm-3 col-md-3 col-lg-3 col-xl-3 mx-auto d-none d-sm-block">
-                        
-                    </div>
-                    <div class="text-end col-xs-1 col-sm-3 col-md-3 col-lg-3 col-xl-3 mx-auto separar_items mb-4">
-                        <a href="./comprar.html"><button class="bordear2">Comprar</button></a>
-                    </div>
+                </div>
+                <hr>
+                <div id="totalJuegosRow" class="row mx-1 mb-2">
                     
                 </div>
             </div>
-        </section>
+            <div class="col-xs-6 col-sm-12 col-md-5 col-lg-5 col-xl-5 py-0 px-0 fondo-carrito fondo-altura mx-2 mt-2 bordear2">
+                <h4 class="text-center mt-1">Total</h4>
+                <hr>
+                <div class="row">
+                    <label class="col-7 mx-auto negrita" for="Total">Subtotal:</label>
+                    <p id="subTotalCarritoPage" class="col-3 mx-auto negrita mb-2"></p>
+                    <label class="col-7 mx-auto negrita" for="Total">IVA:</label>
+                    <p id="ivaTotalCarritoPage" class="col-3 mx-auto negrita mb-2"></p>
+                    <hr>
+                    <label class="col-7 mx-auto negrita" for="Total">Total:</label>
+                    <p id="totalCarritoPage" class="col-3 mx-auto negrita mb-2"></p>
+                    <div class="text-center"><button class="bordear2 mt-4 negrita boton-grande mb-2">Pagar</button></div>
+                </div>
+                
+            </div>
+        </div>
+        
     </main>
-    <footer class="color-fondo mb-0">
+    <footer class="color-fondo mb-0 mt-2">
         <div class="display-footer">
             <div class="borde-derecha">
                 <ul class="cambiar-texto-footer">
@@ -158,5 +119,6 @@
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script type="module" src="./assets/js/carrito.js"></script>
 </body>
 </html>

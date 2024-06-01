@@ -1,4 +1,6 @@
 import { juegosPorConsola } from "./crearCards.js";
+// import { botonComprar3 } from "./botonComprar.js"
+import { agregarAlCarrito } from "./juegos.js";
 
 export const verProducto = (juego) => {
     
@@ -61,7 +63,7 @@ export const verProducto = (juego) => {
         const numeroPage = document.getElementById('numeroPage');
         
         botonRestarPage.addEventListener('click', () => {
-            if (parseInt(numeroPage.value) <= 0){
+            if (parseInt(numeroPage.value) <= 1){
                 alert("No hay articulos que restar")
             }else{
                 numeroPage.value=parseInt(numeroPage.value)-1
@@ -76,6 +78,26 @@ export const verProducto = (juego) => {
             numeroPage.value=parseInt(numeroPage.value)+1
             }
         });
+        const botonComprar2 = document.getElementById('botonComprar');
+        
+    botonComprar2.addEventListener('click', (event) => {
+        event.preventDefault();
+            const img = imagePage.src;
+            const nombre = titlePage.textContent;
+            const precio = precioPage.textContent;
+            const cantidad = numeroPage.value;
+            console.log(cantidad);
+
+            let juegosCarrito = JSON.parse(localStorage.getItem('carritos'));
+
+            if (!Array.isArray(juegosCarrito)) {
+                juegosCarrito = [];
+            }
+            console.log(cantidad);
+
+        agregarAlCarrito(nombre, precio, cantidad, juegosCarrito, img);
+        window.location.href = './Catalogo.html';
+    })
 
         irJuegoRandom(juegosRandom);
     })
