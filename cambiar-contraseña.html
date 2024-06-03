@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,17 +17,17 @@
                 <div class="collapse navbar-collapse" id="navbarScroll">
                     <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                         <li class="nav-item separar_items">
-                            <a class="nav-link tam-fuente" aria-current="page" href="./index.html">Inicio</a>
+                            <a class="nav-link active tam-fuente" aria-current="page" href="./index.html">Inicio</a>
                         </li>
                         <li class="nav-item separar_items">
-                            <a class="nav-link tam-fuente" aria-current="page" href="#">Nosotros</a>
+                            <a class="nav-link tam-fuente" aria-current="page" href="./Nosotros.html">Nosotros</a>
                         </li>
                         <li class="nav-item separar_items">
-                            <a class="nav-link tam-fuente" href="#">Juegos</a>
+                            <a class="nav-link tam-fuente" href="./Catalogo.html">Juegos</a>
                         </li>
 
                         <li class="nav-item separar_items">
-                            <a class="nav-link active tam-fuente d-block d-md-none d-lg-none d-xl-none d-xxl-none" href="#">Iniciar sesión</a>
+                            <p id="btnIniciar2" class="nav-link tam-fuente d-block d-md-none d-lg-none d-xl-none d-xxl-none">Iniciar sesion</p>
                         </li>
 
                         <li class="nav-item separar_items">
@@ -39,10 +38,10 @@
                 
                 <form class="d-flex flex-nowrap my-2 -my-lg-0">
                     <div class="input-group"> 
-                        <input class="form-control mr-sm-2 controlar-forma" type="search" placeholder="Buscar" aria-label="Search">
-                        <a href="./Catalogo.html"><button class="btn btn-outline-success" type="button">🔎</button></a>
+                        <input id="buscarJuegoPage" class="form-control mr-sm-2 controlar-forma" type="search" placeholder="Buscar" aria-label="Search">
+                        <button id="botonBuscarPage" class="btn btn-outline-success" type="button">🔎</button>
                         <a class="quitar-link" href="./carrito.html"><button class="btn btn-outline-success d-none d-sm-block" type="button">🛒</button></a>
-                        <a href="./iniciar-sesion.html"><button class="btn btn-outline-success d-none d-sm-block" type="button">👤</button></a>
+                        <button id="btnIniciar" class="btn btn-outline-success d-none d-sm-block" type="button">👤</button>
                     </div>
                 </form>
                 
@@ -50,9 +49,7 @@
         </nav>
     </header>
     <main>
-        <section class="container 
-                        ingresar
-                        color-letra" >
+        <section class="container2 horizontal-container posicion row">
             <div>
                 <h1>
                     MEGA GAMES
@@ -61,22 +58,38 @@
                 <br>
                 <h2>Cambiar Contraseña</h2>
             </div>
-            <div class="posicion">
-                <input type="email" placeholder="Correo">
-                <label class="labell">Correo Enlasado</label>
+            <div class="container2 horizontal-container row col-lg-6 col-xs-5 col-sm-6 col-md-6 col-xl-5 col-xxl-4">
+                <form id="loginForm">
+                    <label id="condicion2" class=" tam_letra"></label>
+                    <br><br>
+                    <div class="posicion row">
+                        <input id="loginUserEmail" type="email" placeholder="Correo" required>
+                        <label class="labell" for="loginUserEmail">Correo Electronico</label>
+                        <label id="email_current" class="error-message"></label><!--Mensaje personal-->
+                    </div>
+                    <br>
+                    <div class="posicion row">
+                        <input id="loginPasswordB" type="password" placeholder="Contraseña Anterior" required>
+                        <label class="labell" for="loginPasswordB">Contraseña Nueva</label>
+                        <label id="pass_before" class="error-message"></label> <!--Mensaje personal-->
+                    </div>
+                    <br>
+                    <div class="posicion row horizontal-container">
+                        <input id="loginPasswordN" type="password" placeholder="Contraseña Nueva" required>
+                        <label class="labell" for="loginPasswordN">Repetir Contraseña Nueva</label>
+                        <label id="pass_new" class="error-message"></label> <!--Mensaje personal-->
+                        <button id="btn_cambiar" type="submit" class="btn-ingresar mar btn2">Cambiar</button>
+                    </div>
+                </form>
+                
             </div>
-            <div class="posicion">
-                <input type="password" placeholder="Contraseña">
-                <label class="labell">Contraseña anterior</label>
-            </div> 
-            <div class="posicion">
-                <input type="password" placeholder="Contraseña">
-                <label class="labell">Contraseña Nueva</label>
-            </div>            
+                        
             <br>
-            <button class="btn-ingresar"><a href="./iniciar-sesion.html">Cambiar</a></button>
+            
+            
         </section>
     </main>
+    
     <footer class="color-fondo mb-0">
         <div class="display-footer">
             <div class="borde-derecha">
@@ -86,6 +99,7 @@
                     <li><a href="./Nosotros.html" class="quitar-azul">Quienes Somos</a></li>
                     <li><a href="./index.html" class="quitar-azul">Servicios</a></li>
                     <li><a href="./Nosotros.html" class="quitar-azul">Contacto</a></li>
+                    <li><a href="./noticias.html" class="quitar-azul">Noticias</a></li>
                 </ul>
             </div>
     
@@ -105,13 +119,16 @@
                 </ul>
             </div>
         </div>
-
+    
         <div class="text-center">
             <h2 class="color-distinto">Mega Games</h2>
             <p class="color-distinto">Términos de uso Políticas de privacidad Política de derechos de autor</p>
             <p class="color-distinto-tras">© 2024 Mega Games • Diseñado por: VisionWeb</p>    
         </div>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script type="module" src="./assets/js/Validaciones_cambiar_contraseña.js"></script>
+    <script type="module" src="./assets/js/loginVerificado.js"></script>
 </body>
 </html>

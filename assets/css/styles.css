@@ -394,6 +394,9 @@ html, body{/*Fondo de pantalla*/
 .anchar-boton{
     height: 3.2vh;
 }
+#btnIniciar{
+    cursor: pointer;
+}
 .anchar-boton:hover{
     background-color: rgba(174, 183, 179, 1);
     transition: 0.15s all ease;
@@ -412,6 +415,68 @@ html, body{/*Fondo de pantalla*/
     min-width: 6rem;
     height: 4.5vh;
     width: 6vw;
+}
+.horizontal-container {
+    justify-content: center;
+    gap: 20px; /* Espacio entre los campos */
+    text-align: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/*margen par btn registrar o ingresar*/
+.mar{
+    margin-bottom: 5rem;
+}
+
+/* btn de ingresar y registrar*/
+.btn2:hover{text-decoration: none;
+    background: #023C40;
+    color: white;
+    border: 1px solid white;
+
+}
+
+.tam_letra{
+    font-size: 1.2rem;
+}
+
+.registros{
+    text-align: center;
+    border: 1px white solid;
+    border-radius: 15px;
+    padding: 1rem;
+    margin: 2rem;
+
+}
+.perfil{
+    border-radius: 50%;
+    height: 220px;
+    width: 220px;
+}
+.tamaño-card2{
+    width: auto;
+}
+
+.texto-card2{
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 1000;
+}
+
+.texto-card3{
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.tamaño-noticia {
+    max-height: 226px;
+    max-width: 100%;
+    object-fit: cover;
 }
 
 
@@ -495,7 +560,13 @@ html, body{/*Fondo de pantalla*/
     .despegar-pantalla{
         margin-right: 1vw;
     }
+    .perfil2{
+        border-radius: 50%;
+        height: 150px;
+        width: 150px;
+    }
 }
+
 @media screen and (min-width:321px) and (max-width: 575px) {
     .tam-titulo{
         font-size: 2.5rem;
@@ -553,6 +624,14 @@ html, body{/*Fondo de pantalla*/
         font-size: .6rem;
     }
 }
+@media screen and (min-width:320px) and (max-width:621px){
+
+    .perfil2{
+        border-radius: 50%;
+        height: 150px;
+        width: 150px;
+    }
+}
 
 @media screen and (min-width:576px) and (max-width:767px){
     .tam-titulo{
@@ -572,6 +651,11 @@ html, body{/*Fondo de pantalla*/
     .letras-carrito{
         font-size: .9rem;
     }
+    .perfil2{
+        border-radius: 50%;
+        height: 210px;
+        width: 210px;
+    }
 }
 @media screen and (min-width:768px) and (max-width:991px){
     .borde-derecha{
@@ -585,4 +669,29 @@ html, body{/*Fondo de pantalla*/
     .letras-carrito{
         font-size: 1.1rem;
     }
+    .perfil2{
+        border-radius: 50%;
+        height: 250px;
+        width: 250px;
+    }
+}
+@media screen and (min-width:992px) and (max-width:1618px){
+    .perfil2{
+        border-radius: 50%;
+        height: 250px;
+        width: 250px;
+    }
+}
+
+@media screen and (min-width:1619px) and (max-width:2158px){
+    .perfil2{
+        border-radius: 50%;
+        height: 300px;
+        width: 300px;
+    }
+}
+
+.dist{
+    display: flex;
+    padding-right: 17rem;
 }
