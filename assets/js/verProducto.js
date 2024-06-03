@@ -89,6 +89,7 @@ export const verProducto = (juego) => {
             const nombre = titlePage.textContent;
             const precio = precioPage.textContent;
             const cantidad = numeroPage.value;
+            const cantidadMaxima = juego.cantidad;
 
 
             let juegosCarrito = JSON.parse(localStorage.getItem('carritos'));
@@ -97,7 +98,7 @@ export const verProducto = (juego) => {
                 juegosCarrito = [];
             }
 
-        agregarAlCarrito(nombre, precio, cantidad, juegosCarrito, img);
+        agregarAlCarrito(nombre, precio, cantidad, juegosCarrito, img, cantidadMaxima);
         window.location.href = './Catalogo.html';
             
         }else{

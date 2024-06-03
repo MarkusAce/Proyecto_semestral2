@@ -5,8 +5,10 @@ import { crearCarrito } from "./crearCarrito.js";
 const pagVerdadero = carritoPage();
 if(pagVerdadero === true){
     crearCarrito();
+    actualizarTotales();
 
-    const totalCarritoPage = document.getElementById('totalCarritoPage');
+    function actualizarTotales(){
+        const totalCarritoPage = document.getElementById('totalCarritoPage');
     const subTotalCarritoPage = document.getElementById('subTotalCarritoPage');
     const ivaTotalCarritoPage = document.getElementById('ivaTotalCarritoPage');
     const juegosPrecioTotal = JSON.parse(localStorage.getItem('carritos'));
@@ -22,11 +24,20 @@ if(pagVerdadero === true){
         const cantidadJuegos = parseInt(juego.cantidad);
         const valorJuego = parseInt(precioFinal);
         total += cantidadJuegos*valorJuego;
-    })
+    
+
+    
+    });
     iva = total*0.19;
     subTotal=total-iva;
     totalCarritoPage.textContent = "$" + total.toLocaleString();
     subTotalCarritoPage.textContent = "$" + subTotal.toLocaleString();
     ivaTotalCarritoPage.textContent = "$" + iva.toLocaleString();
-
+    }
+    
+    document.addEventListener('click', function (event) {
+        if (event.target && (event.target.classList.contains('btn-mas') || event.target.classList.contains('btn-menos'))) {
+            actualizarTotales();
+        }
+    });
 }

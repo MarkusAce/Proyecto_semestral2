@@ -19,7 +19,13 @@ const obtenerJuegos = async () =>{
             juegos = await obtenerJuegos();
             localStorage.setItem('ArregloDeJuegos', JSON.stringify(juegos));
         }else{
-            juegos = JSON.parse(localStorage.getItem('ArregloDeJuegos'));
+            if (!juegos){
+                juegos = await obtenerJuegos();
+                localStorage.setItem('ArregloDeJuegos', JSON.stringify(juegos));
+            }else{
+                juegos = JSON.parse(localStorage.getItem('ArregloDeJuegos'));
+            }
+            
         }
 
         const pagVerdadero = indexPage();

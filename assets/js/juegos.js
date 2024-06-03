@@ -1,12 +1,10 @@
 // import { actualizarCarrito } from "./carrito.js";
 
-export function agregarAlCarrito(nombre, precio, cantidad, juegosCarrito, img) {
-    console.log(cantidad);
+export function agregarAlCarrito(nombre, precio, cantidad, juegosCarrito, img, cantidadMaxima) {
     parseInt(cantidad);
-    console.log(cantidad);
     if (cantidad >= 1) {
         // Crear objeto del juego actual
-        const juegoActual = { nombre, precio, cantidad, img };
+        const juegoActual = { nombre, precio, cantidad, img, cantidadMaxima};
 
         // Agregar el juego actual a la lista de juegos en el carrito
         juegosCarrito.push(juegoActual);
