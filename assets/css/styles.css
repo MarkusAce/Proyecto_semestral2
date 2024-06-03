@@ -586,3 +586,117 @@ html, body{/*Fondo de pantalla*/
         font-size: 1.1rem;
     }
 }
+
+/*-----------------------------------------Registrar y iniciar sessión---------------------------------------------------*/
+
+/*Registrar Css*/
+.horizontal-container {
+    justify-content: center;
+    gap: 20px; /* Espacio entre los campos */
+    text-align: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/*margen par btn registrar o ingresar*/
+.mar{
+    margin-bottom: 5rem;
+}
+
+/* btn de ingresar y registrar*/
+.btn2:hover{text-decoration: none;
+    background: #023C40;
+    color: white;
+    border: 1px solid white;
+
+}
+
+.tam_letra{
+    font-size: 1.2rem;
+}
+
+.registros{
+    text-align: center;
+    border: 1px white solid;
+    border-radius: 15px;
+    padding: 1rem;
+    margin: 2rem;
+
+}
+
+/*Imagen registrar perfil*/
+.perfil{
+    border-radius: 50%;
+    height: 220px;
+    width: 220px;
+}
+@media screen and (max-width: 320px) {
+    .perfil2{
+        border-radius: 50%;
+        height: 150px;
+        width: 150px;
+    }
+}
+
+@media screen and (min-width:320px) and (max-width:621px){
+
+    .perfil2{
+        border-radius: 50%;
+        height: 150px;
+        width: 150px;
+    }
+}
+
+@media screen and (min-width:576px) and (max-width:767px){
+    .perfil2{
+        border-radius: 50%;
+        height: 210px;
+        width: 210px;
+    }
+
+}
+
+@media screen and (min-width:768px) and (max-width:991px){
+    .perfil2{
+        border-radius: 50%;
+        height: 250px;
+        width: 250px;
+    }
+}
+
+@media screen and (min-width:992px) and (max-width:1618px){
+    .perfil2{
+        border-radius: 50%;
+        height: 250px;
+        width: 250px;
+    }
+}
+
+@media screen and (min-width:1619px) and (max-width:2158px){
+    .perfil2{
+        border-radius: 50%;
+        height: 300px;
+        width: 300px;
+    }
+}
+
+.dist{
+    display: flex;
+    padding-right: 17rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuarios</title>
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    
+</head>
+<body>
+    <header class="bajar">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                        <li class="nav-item separar_items">
+                            <a class="nav-link tam-fuente" aria-current="page" href="./index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item separar_items">
+                            <a class="nav-link tam-fuente" aria-current="page" href="./Nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item separar_items">
+                            <a class="nav-link tam-fuente" href="./Catalogo.html">Juegos</a>
+                        </li>
+
+                        <li class="nav-item separar_items">
+                            <a class="nav-link active tam-fuente d-block d-md-none d-lg-none d-xl-none d-xxl-none" href="./iniciar-sesion.html">Iniciar sesión</a>
+                        </li>
+
+                        <li class="nav-item separar_items">
+                            <a class="nav-link tam-fuente d-block d-md-none d-lg-none d-xl-none d-xxl-none" href="./carrito.html">Carrito</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <form class="d-flex flex-nowrap my-2 -my-lg-0">
+                    <div class="input-group"> 
+                        <input class="form-control mr-sm-2 controlar-forma" type="search" placeholder="Buscar" aria-label="Search">
+                        <a href="./Catalogo.html"><button class="btn btn-outline-success" type="button">🔎</button></a>
+                        <a class="quitar-link" href="./carrito.html"><button class="btn btn-outline-success d-none d-sm-block" type="button">🛒</button></a>
+                        <a href="./iniciar-sesion.html"><button class="btn btn-outline-success d-none d-sm-block" type="button">👤</button></a>
+                    </div>
+                </form>
+            </div>
+        </nav>
+    </header>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    <main>
+        <section>
+            <div class="horizontal-container border ">
+                <div class="dist">
+                    <div class="dist" id="greeting"></div>
+                    <div class="dist" id="date">Fecha</div>
+                    <div id="clock">00:00:00</div>
+                </div>
+                
+
+                <h1>Ver Personas Registradas</h1>
+                <div class="row horizontal-container">
+                    <img class="perfil" id="img" src="./assets/img/Perfil.png" alt="perfil">
+                    <button id="btn_ver">Ver Personas agregadas</button>
+                    <button id="cerrar"> Ocultar</button>
+                    <button id="refrescar"> Refrescar</button>
+                </div>
+
+                <div class=" horizontal-container row">
+                    <ol class="row" id="ver_usuarios"></ol>
+                </div>
+
+                
+                <br>
+                
+                
+                
+            </div>
+        </section>
+        
+    </main>
+    
+    <script src="./assets/js/Ver_Usuarios_registrados.js"></script>
+    
+</body>
+</html>

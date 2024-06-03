@@ -1,17 +1,18 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrarse</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css/styles.css">
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>    
 
 </head>
 <body>
-    <header class="mt-3">
-        <nav class="navbar navbar-expand-lg bg-nav">
+    <header class="bajar">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -51,61 +52,82 @@
     </header>
 
     <main>
-        <section class="container
-                        ingresar
-                        color-letra
-                        espacio
-                        display-footer">
-               <!--     -->         
+        <section class="row horizontal-container">        
             <div>
                 <h1 class="centrar_titulo1">MEGA GAMES</h1>
                 <hr>
-                <h2 class="texto">Crear Cuenta</h2>
-                <img src="./assets/img/Perfil.png" alt="perfil" class="tam-perfil1">
+                <h2>Crear Cuenta</h2>
+
+                <div class="row horizontal-container">
+                    <img class="perfil" id="img" src="./assets/img/Perfil.png" alt="perfil">
+                </div>
+                <form id="formulario">
+                    <input type="file" id="foto" name="foto">
+                </form>
+
+
+
+
             </div>           
-            
-                <div class="posicion">
-                    <input type="file" placeholder="Subir Imagen">
-                    <label class="labell"></label>
+            <div class="container2 horizontal-container row col-lg-6 col-xs-5 col-sm-6 col-md-6 col-xl-5 col-xxl-4">
+                <div class="horizontal-container row container2">
+                    <label id="condicion" class="labell tam_letra"></label>
+                    <h1></h1>
                 </div>
                 <hr>
-                <h5 class="">Datos Personales</h5>
-                <div class="container2
-                            borde">
-                  <div class="posicion">
-                    <input type="text" placeholder="Nombre">
+                <h2 class="text-center color1">Datos Personales</h2>
+
+                <div class="container2 horizontal-container row">
+                  <div class="posicion row">
+                    <input id="e_nombre" type="text" placeholder="Nombre">
                     <label class="labell">Nombre</label>
+                    <label id="error_nombre"></label> <!--Tiene id-->
                   </div>
-                  <div class="posicion">
-                      <input type="text" placeholder="Apellido">
+                  <div class="posicion row">
+                      <input id="e_apellido" type="text" placeholder="Apellido">
                       <label class="labell">Apellido</label>
+                      <label id="error_apellido"></label> <!--Tiene id-->
                   </div>
                 </div>
-                <div class="container2
-                            borde">
-                  <div class="posicion">
-                    <input type="text" placeholder="Rut">
+
+                <div class="container2 horizontal-container row">
+                  <div class="posicion row">
+                    <input id="e_rut" type="text" placeholder="Rut">
                     <label class="labell">Rut</label>
+                    <label id="error_rut"></label> <!--Tiene id-->
                   </div>
-                  <div class="posicion">
-                      <input type="date" placeholder="Fecha De Nacimiento">
+                  <div class="posicion row">
+                      <input id="e_fecha" type="date" placeholder="Fecha De Nacimiento">
                       <label class="labell">Fecha De Nacimiento</label>
+                      <label id="error_fecha"></label> <!--Tiene id-->
                   </div>
                 </div> 
+
                 <hr>
-                <div class="posicion">
-                    <input type="email" placeholder="Correo">
-                    <label class="labell">Correo</label>
+                
+                <div class="container2 horizontal-container row">
+                    <div class="posicion row">
+                        <input id="e_correo" type="email" placeholder="Correo">
+                        <label class="labell">Correo</label>
+                        <label id="error_correo"></label> <!--Tiene id-->
+                    </div> 
+    
+                    <div class="posicion row">
+                        <input id="e_contraseña" type="password" placeholder="Contraseña">
+                        <label class="labell">Contraseña</label>
+                        <label id="error_contraseña"></label> <!--Tiene id-->
+                    </div> 
+                    
+                    <div class="posicion row horizontal-container">
+                    <input id="e_repetir" type="password" placeholder="Repetir Contraseña">
+                    <label class="labell ">Repetir Contraseña</label>
+                    <label id="error_repetir"></label> <!--Tiene id-->
+                    <button id="btn_registrar" class="btn-ingresar mar btn2">Registrar</button>
+                
+                    </div>
+
                 </div>
-                <div class="posicion">
-                    <input type="password" placeholder="Contraseña">
-                    <label class="labell">Contraseña</label>
-                </div> 
-                <div class="posicion">
-                <input type="password" placeholder="Repetir Contraseña">
-                <label class="labell">Repetir Contraseña</label>
-                </div>
-                <button class="btn-ingresar"><a href="./iniciar-sesion.html">Registrar</a></button>
+            </div>  
                 <br>
                 <br>
         </section>
@@ -122,13 +144,15 @@
                 </ul>
             </div>
     
-            <div class="text-center borde-derecha">
+            <div class="alinear-centro borde-derecha">
                 <h3 class="color-blanco">¿Dónde encontrarnos?</h3>
                 <a href="https://www.google.com/maps" class="quitar-azul2">El Árbol 123. Santiago. <br> Región Metropolitana</a>
+
+                
             </div>
     
-            <div class="text-center">
-                <h3 class="color-blanco2 mt-2">Contactos</h3>
+            <div class="alinear-centro">
+                <h3 class="color-blanco3">Contactos</h3>
                 <ul class="cambiar-texto-footer">
                     <li><a href="https://www.instagram.com" class="quitar-azul2">Instragram</a></li>
                     <li><a href="https://web.facebook.com/?locale=es_LA&_rdc=1&_rdr" class="quitar-azul2">Facebook</a></li>
@@ -139,12 +163,13 @@
             </div>
         </div>
 
-        <div class="text-center">
+        <div class="alinear-centro">
             <h2 class="color-distinto">Mega Games</h2>
             <p class="color-distinto">Términos de uso Políticas de privacidad Política de derechos de autor</p>
             <p class="color-distinto-tras">© 2024 Mega Games • Diseñado por: VisionWeb</p>    
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="./assets/css/bootstrap.min.css"></script>
+    <script type="module" src="./assets/js/Validaciones_registrarse.js"></script>
 </body>
 </html>
