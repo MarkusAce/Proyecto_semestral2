@@ -58,6 +58,7 @@ export const verProducto = (juego) => {
         const nuevoHTML = new XMLSerializer().serializeToString(doc);
 
         document.body.innerHTML = nuevoHTML;
+        const cantidad = parseInt(cantidadPage.textContent);
 
         const botonRestarPage = document.getElementById('botonRestarPage');
         const numeroPage = document.getElementById('numeroPage');
@@ -78,25 +79,31 @@ export const verProducto = (juego) => {
             numeroPage.value=parseInt(numeroPage.value)+1
             }
         });
-        const botonComprar2 = document.getElementById('botonComprar');
+    const botonComprar2 = document.getElementById('botonComprar');
         
     botonComprar2.addEventListener('click', (event) => {
         event.preventDefault();
+        const cantidad = parseInt(numeroPage.value);
+        if(cantidad>=1 && cantidad<= juego.cantidad){
             const img = imagePage.src;
             const nombre = titlePage.textContent;
             const precio = precioPage.textContent;
             const cantidad = numeroPage.value;
-            console.log(cantidad);
+
 
             let juegosCarrito = JSON.parse(localStorage.getItem('carritos'));
 
             if (!Array.isArray(juegosCarrito)) {
                 juegosCarrito = [];
             }
-            console.log(cantidad);
 
         agregarAlCarrito(nombre, precio, cantidad, juegosCarrito, img);
         window.location.href = './Catalogo.html';
+            
+        }else{
+            alert('Cantidad ingresada no valida.')
+        }
+            
     })
 
         irJuegoRandom(juegosRandom);
