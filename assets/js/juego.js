@@ -1,4 +1,4 @@
-//import { actualizarCarrito } from "./carrito.js";
+import { actualizarCarrito } from "./carrito.js";
 
 export function agregarAlCarrito(nombre, precio, cantidad, juegosCarrito) {
 
@@ -19,7 +19,7 @@ export function agregarAlCarrito(nombre, precio, cantidad, juegosCarrito) {
             console.log(`Nombre: ${juego.nombre}, Precio: ${juego.precio}, Cantidad: ${juego.cantidad}`);    
         });
 
-        // actualizarCarrito(juegosCarrito);
+        actualizarCarrito(juegosCarrito);
 
 
     } else {

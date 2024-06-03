@@ -1,17 +1,17 @@
-// export function actualizarCarrito(juegosCarrito) {
+export function actualizarCarrito(juegosCarrito) {
 
 
-//         let carritoid = document.getElementById('Carrito');
+        let carritoid = document.getElementById('Carrito');
 
-//         juegosCarrito.forEach((juego) => {
+        juegosCarrito.forEach((juego) => {
 
-//             const li = document.createElement('li');
-//             li.textContent = `Nombre: ${juego.nombre} - Precio: ${juego.precio} - Cantidad: ${juego.cantidad}`;
-//             console.log(li.textContent);
+            const li = document.createElement('li');
+            li.textContent = `Nombre: ${juego.nombre} - Precio: ${juego.precio} - Cantidad: ${juego.cantidad}`;
+            console.log(li.textContent);
 
-//             carritoid.appendChild(li);
+            carritoid.appendChild(li);
 
-//         });
-//         // window.location.href = 'carrito.html';
+        });
+        window.location.href = 'carrito.html';
 
-// }
+}

@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mega Games</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/styles.css">
+
 </head>
 <body>
-    <!--Falta poner los #a de inicio en todos los archivos html lo hara el marco-->
+<!-- nav -->
     <header class="bajar">
         <nav class="navbar navbar-expand-lg bg-nav">
             <div class="container-fluid">
@@ -18,17 +19,17 @@
                 <div class="collapse navbar-collapse" id="navbarScroll">
                     <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                         <li class="nav-item separar_items">
-                            <a class="nav-link tam-fuente" aria-current="page" href="./index.html">Inicio</a>
+                            <a class="nav-link active tam-fuente" aria-current="page" href="./index.html">Inicio</a>
                         </li>
                         <li class="nav-item separar_items">
                             <a class="nav-link tam-fuente" aria-current="page" href="./Nosotros.html">Nosotros</a>
                         </li>
                         <li class="nav-item separar_items">
-                            <a class="nav-link active tam-fuente" href="./Catalogo.html">Juegos</a>
+                            <a class="nav-link tam-fuente" href="./Catalogo.html">Juegos</a>
                         </li>
 
                         <li class="nav-item separar_items">
-                            <a class="nav-link tam-fuente d-block d-md-none d-lg-none d-xl-none d-xxl-none" href="#">Iniciar sesión</a>
+                            <a class="nav-link tam-fuente d-block d-md-none d-lg-none d-xl-none d-xxl-none" href="./iniciar-sesion.html">Iniciar sesión</a>
                         </li>
 
                         <li class="nav-item separar_items">
@@ -49,30 +50,29 @@
             </div>
         </nav>
     </header>
+<!-- titulo - logo -->
+    <div>
+        <h1 class="centrar_titulo bajar tam-titulo">
+        <img  src="./assets/img/logoo.png" alt="Logo" class="logo">Mega Games</h1>
+    </div>
+
+    <hr class="bajar centrar_titulo">
+
     <main>
-        <div class="row col-11 mx-auto ">
-            <h1 class="centrar_titulo bajar tam-titulo">
-            <img  src="./assets/img/logoo.png" alt="Logo" class="logo">Mega Games</h1>
-            <a class="text-center" href="./Nosotros.html"><img src="./assets/img/mega_logo.jpeg" class=" mx-auto tamaño_foto_nosotros" alt="foto de contacto"></a>
-            <h2 class="bajar centrar_titulo tam-titulo2">Revisa Nuestro Catalogo!</h2>
+        <div>
+            <h2 class="centrar_titulo tam-titulo2">Noticias de último momento</h2>
+            <hr class="centrar_titulo">
         </div>
-        <hr class="centrar_titulo">
-        </section>
-
-        <div class="container-fluid">
-            <button id="ps5Page">PS5</button>
-            <button id="xboxPage">Xbox</button>
-        </div>
-
-        <div class="container-fluid">
-    
-            <div id="juegosRow" class="row">
-    
-            </div>
-            
-        </div>
-        </section>
     </main>
+
+    <div class="container-fluid">
+    
+        <div id="mostrarNoticias" class="row">
+
+        </div>
+        
+    </div>
+
 
     <footer class="color-fondo mb-0">
         <div class="display-footer">
@@ -103,16 +103,14 @@
                 </ul>
             </div>
         </div>
-
+    
         <div class="alinear-centro">
             <h2 class="color-distinto">Mega Games</h2>
             <p class="color-distinto">Términos de uso Políticas de privacidad Política de derechos de autor</p>
             <p class="color-distinto-tras">© 2024 Mega Games • Diseñado por: VisionWeb</p>    
         </div>
     </footer>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script type="module" src="./assets/js/index.js"></script>
-    <script type="module" src="./assets/js/filtroCatalago.js"></script>
+    <script type="module" src="./assets/js/getNoticias.js"></script>
 </body>
 </html>
