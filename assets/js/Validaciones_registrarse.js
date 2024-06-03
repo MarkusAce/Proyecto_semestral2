@@ -1,29 +1,54 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Función para verificar si el usuario existe en el localStorage
+
+    function togglePasswordVisibility() {
+        const e_contraseña = document.getElementById("e_contraseña");
+        const e_repetir = document.getElementById("e_repetir");
+        const togglePassword = document.getElementById("togglePassword");
+    
+        if (e_contraseña.type === "password" && e_repetir.type === "password") {
+            e_contraseña.type = "text";
+            e_repetir.type = "text";
+            togglePassword.textContent = "Ocultar contraseña";
+    
+            setTimeout(function() {
+                e_contraseña.type = "password";
+                e_repetir.type = "password";
+                togglePassword.textContent = "Mostrar contraseña";
+            }, 2000); // Ocultar la contraseña después de 2 segundos
+        }
+    }
+
+    togglePassword.addEventListener("click", () =>{
+        togglePasswordVisibility();
+
+    })
+
+
     let users = JSON.parse(localStorage.getItem('users')) || [];
-    function verificarUsuario(correo) {
-        
-        return users.some(user => user.correo === correo);
+
+    function verificarUsuario(correo, rut) {
+        return users.some(user => user.correo === correo || user.rut === rut);
     }
 
     function iniciarSesion() {
-        const correo = document.getElementById("e_correo").value;
-        console.log(correo);
-        const usuarioExiste = verificarUsuario(correo);
-    
+        const e_correo = document.getElementById("e_correo").value;
+        const e_rut = document.getElementById("e_rut").value;
+        const usuarioExiste = verificarUsuario(e_correo, e_rut);
+
         if (!usuarioExiste) {
             // El usuario no existe, se procede al registro del nuevo usuario
             console.log("Paso 6 y 7: registro y contraseñas.");
-            e_nombre = document.getElementById("e_nombre").value;
-            e_apellido = document.getElementById("e_apellido").value;
-            e_rut = document.getElementById("e_rut").value;
-            e_fecha = document.getElementById("e_fecha").value;
-            e_correo = document.getElementById("e_correo").value;
-            e_contraseña = document.getElementById("e_contraseña").value;
-            e_repetir = document.getElementById("e_repetir").value;
-            foto = imagenBase64;
-    
-    
+            const e_nombre = document.getElementById("e_nombre").value;
+            const e_apellido = document.getElementById("e_apellido").value;
+            const e_fecha = document.getElementById("e_fecha").value;
+            const e_contraseña = document.getElementById("e_contraseña").value;
+            const e_repetir = document.getElementById("e_repetir").value;
+            let foto = imagenBase64;
+
+            if (foto === ""){
+                foto = foto || "./assets/img/Perfil.png";
+            }
+
             let userData = {
                 foto: foto,
                 nombre: e_nombre,
@@ -34,9 +59,9 @@ document.addEventListener("DOMContentLoaded", function() {
                 password1: e_contraseña,
                 password2: e_repetir
             };
-    
+
             console.log("userData:", userData);
-    
+
             // Añade el objeto userData al final del array users
             users.push(userData);
             // Guardar el array actualizado en el localStorage
@@ -45,11 +70,12 @@ document.addEventListener("DOMContentLoaded", function() {
             Cambiar();
         } else {
             // El usuario ya existe, mostrar alerta
-            condicionLabel3.textContent = "El correo electrónico ya está registrado.";
-            alert('El correo electrónico ya está registrado. Vaya al apartado de iniciar sesión.');
+            condicionLabel3.textContent = "El correo electrónico o el rut ya están registrados.";
+            alert('El correo electrónico o el rut ya están registrados. Vaya al apartado de iniciar sesión.');
             Cambiar();
         }
     }
+
     
     /*---------------------------------------------------------------------------------------------*/
 

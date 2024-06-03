@@ -1,5 +1,27 @@
 document.addEventListener("DOMContentLoaded", function() {
 
+    function togglePasswordVisibility() {
+        const loginPasswordB = document.getElementById("loginPasswordB");
+        const loginPasswordN = document.getElementById("loginPasswordN");
+        const togglePassword = document.getElementById("togglePassword");
+    
+        if (loginPasswordB.type === "password" && loginPasswordN.type === "password") {
+            loginPasswordB.type = "text";
+            loginPasswordN.type = "text";
+            togglePassword.textContent = "Ocultar contraseña";
+    
+            setTimeout(function() {
+                loginPasswordB.type = "password";
+                loginPasswordN.type = "password";
+                togglePassword.textContent = "Mostrar contraseña";
+            }, 2000); // Ocultar la contraseña después de 2 segundos
+        }
+    }
+
+    togglePassword.addEventListener("click", () =>{
+        togglePasswordVisibility();
+
+    })
 
     
     // Creamos variables

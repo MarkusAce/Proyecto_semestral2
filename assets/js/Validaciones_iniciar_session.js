@@ -1,5 +1,26 @@
 //Validación de iniciar sessión
 document.addEventListener("DOMContentLoaded", function() {
+    const loginPassword = document.getElementById("loginPassword");
+    const togglePassword = document.getElementById("togglePassword");
+
+    
+
+
+    function togglePasswordVisibility() {
+        
+        if (loginPassword.type === "password") {
+            loginPassword.type = "text";
+            setTimeout(function() {
+                loginPassword.type = "password";
+                togglePassword.textContent = "Mostrar contraseña";
+            }, 2000); // Ocultar la contraseña después de 1 segundos
+        }
+    }
+
+    togglePassword.addEventListener("click", () =>{
+        togglePasswordVisibility();
+
+    })
 
 
     // Función para verificar si el usuario existe en el localStorage
